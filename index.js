@@ -21,7 +21,9 @@ server.use(express.urlencoded({ extended: true }))
 server.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 console.log(process.env.USERNAME_DB)
-
+server.get("/", (req, res) => {
+  res.send("/docs to acess documentation!")
+})
 server.use("/users", user_routes);
 server.use("/products", product_routes)
 
