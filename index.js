@@ -2,7 +2,7 @@ process.env.NODE_ENV = "production";
 
 const express = require("express");
 require('dotenv').config({
-  path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
+  path: process.env.NODE_ENV === "test" ? ".env" : ".env"
 }
 );
 const swaggerUi = require('swagger-ui-express');
