@@ -1,4 +1,4 @@
-process.env.NODE_ENV = "test";
+process.env.NODE_ENV = "production";
 
 const express = require("express");
 require('dotenv').config({
