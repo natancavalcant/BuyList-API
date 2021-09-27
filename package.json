@@ -23,7 +23,7 @@
   },
   "scripts": {
     "swagger-autogen": "node swagger.js",
-    "start": "nodemon index.js"
+    "start": "nodemon index.js --env test"
   },
   "engines": {
     "node": "16.7.0"
