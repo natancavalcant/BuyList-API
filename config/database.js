@@ -6,5 +6,4 @@ module.exports = {
   database: process.env.DATABASE_DB,
   host: process.env.DATABASE_URL,
   dialect: process.env.DIALECT_DB,
-  port: 5432
 }
