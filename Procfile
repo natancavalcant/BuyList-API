@@ -1,1 +1,1 @@
-web: yarn index.js
+web: yarn ./index.js
