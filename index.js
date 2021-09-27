@@ -28,4 +28,4 @@ server.use("/users", user_routes);
 server.use("/products", product_routes)
 
 
-server.listen(3000)
+server.listen(process.env.PORT || 3000)
