@@ -14,6 +14,14 @@
   "consumes": [],
   "produces": [],
   "paths": {
+    "/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
     "/users/": {
       "get": {
         "tags": [],
@@ -64,7 +72,7 @@
     "/users/auth": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para autenticação usuários (retorna o token).",
         "parameters": [
           {
             "name": "obj",
@@ -98,7 +106,7 @@
     "/users/get/{user_id}": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para obter as informações do usuário (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -137,7 +145,7 @@
     "/users/update/{user_id}": {
       "put": {
         "tags": [],
-        "description": "",
+        "description": "Rota para alterar informações do usuário (precisa passar o token do usuário logado, passar nome de usuário e senha no corpo da requisição)",
         "parameters": [
           {
             "name": "user_id",
@@ -182,7 +190,7 @@
     "/users/delete/{user_id}": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para deletar usuário (precisa passar o token do usuário logado, e o id como parametro da requisição).",
         "parameters": [
           {
             "name": "user_id",
@@ -221,7 +229,7 @@
     "/users/{user_id}/product-list/add-product": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para adicionar um produto a lista do usuário (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -263,7 +271,7 @@
     "/users/{user_id}/product-list": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para obter os produtos na lista do usuário (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -312,7 +320,7 @@
     "/users/{user_id}/product-list/{category_name}": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para produtos de uma categoria na lista do usuário (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -367,7 +375,7 @@
     "/users/{user_id}/product-list/remove-product/{product_id}": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para cadastrar remover um produto da lista do usuário passando o id na requisição. (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -412,7 +420,7 @@
     "/users/{user_id}/product-list/remove-all-products": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para remover todos os produtos da lista do usuário (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -451,7 +459,7 @@
     "/users/{user_id}/product-list/remove-all-products-from-category/{category_name}": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para remover todos os produtos de uma determinada categoria (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -496,7 +504,7 @@
     "/users/{user_id}/product-list/add-product-quantity": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para alterar as quantidades de um determinado produto (precisa passar o token do usuário logado).",
         "parameters": [
           {
             "name": "user_id",
@@ -556,7 +564,7 @@
     "/products/categories/create": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para criar uma nova categoria (login de administrador).",
         "parameters": [
           {
             "name": "token",
@@ -597,7 +605,7 @@
     "/products/categories/delete/{category_name}": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para excluir uma categoria (login de administrador).",
         "parameters": [
           {
             "name": "category_name",
@@ -641,7 +649,7 @@
     "/products/update/add-category": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para adicionar uma categoria a um produto (login de administrador).",
         "parameters": [
           {
             "name": "token",
@@ -685,7 +693,7 @@
     "/products/update/remove-category": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para remover um produto de uma categoria (login de administrador, se o produto só possuir uma categoria ele é excluido também).",
         "parameters": [
           {
             "name": "token",
@@ -729,7 +737,7 @@
     "/products/create/{category_name}": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Rota para criar um novo produdo e adiciona-lo a uma categoria (login de administrador). ",
         "parameters": [
           {
             "name": "category_name",
@@ -779,7 +787,7 @@
     "/products/delete/{product_id}": {
       "delete": {
         "tags": [],
-        "description": "",
+        "description": "Rota para excluir um produto (login de administrador).",
         "parameters": [
           {
             "name": "product_id",
@@ -823,7 +831,7 @@
     "/products/update/{product_id}": {
       "put": {
         "tags": [],
-        "description": "",
+        "description": "Rota para atualizar informações de um produto (login de administrador).",
         "parameters": [
           {
             "name": "product_id",
@@ -873,7 +881,7 @@
     "/products/get-product/{product_name}": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para obter informações de um produto.",
         "parameters": [
           {
             "name": "product_name",
@@ -895,7 +903,7 @@
     "/products/get-all-products": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para obter todos os produtos cadastrados.",
         "parameters": [
           {
             "name": "limit",
@@ -921,7 +929,7 @@
     "/products/get-products-by-category/{category_name}": {
       "get": {
         "tags": [],
-        "description": "",
+        "description": "Rota para obter todos os produtos de uma determinada categoria.",
         "parameters": [
           {
             "name": "category_name",
