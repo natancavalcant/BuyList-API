@@ -21,7 +21,6 @@
     "sequelize-cli": "^6.2.0"
   },
   "scripts": {
-    "build": "sequelize db:migrate --env production",
     "swagger-autogen": "node swagger.js",
     "start": "nodemon index.js"
   },
