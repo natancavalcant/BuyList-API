@@ -20,7 +20,7 @@ server.use(express.json())
 server.use(express.urlencoded({ extended: true }))
 server.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
-console.log(process.env.DIALECT_DB)
+//console.log()
 server.get("/", (req, res) => {
   res.send("/docs to acess documentation!")
 })
