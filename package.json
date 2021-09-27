@@ -24,5 +24,8 @@
     "build": "sequelize db:migrate --env production",
     "swagger-autogen": "node swagger.js",
     "start": "nodemon index.js"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
